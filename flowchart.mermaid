@@ -1,15 +1,15 @@
 graph TD
-    A([Başla]) --> B[Sabitleri Tanımla: a, c, m]
-    B --> C{Seed Verildi mi?}
-    C -- Hayır --> D[Seed = Şimdiki Zaman (Time)]
-    C -- Evet --> E[Seed = Kullanıcı Girişi]
-    D --> F[Durum (State) = Seed]
+    A([Başla]) --> B["Sabitleri Tanımla: a, c, m"]
+    B --> C{"Seed Verildi mi?"}
+    C -- Hayır --> D["Seed = Şimdiki Zaman (Time)"]
+    C -- Evet --> E["Seed = Kullanıcı Girişi"]
+    D --> F["Durum (State) = Seed"]
     E --> F
     
-    F --> G[Kullanıcı Sayı İstiyor mu?]
-    G -- Evet --> H[Hesapla: <br> State = (a * State + c) % m]
-    H --> I[Yeni State'i Kaydet]
-    I --> J[Sayıyı Döndür / Yazdır]
+    F --> G{"Kullanıcı Sayı İstiyor mu?"}
+    G -- Evet --> H["Hesapla: <br> State = (a * State + c) % m"]
+    H --> I["Yeni State'i Kaydet"]
+    I --> J["Sayıyı Döndür / Yazdır"]
     J --> G
     G -- Hayır --> K([Bitir])
 
